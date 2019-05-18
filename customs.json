@@ -1,0 +1,9 @@
+{
+    "elements": {
+        "p:panel": {},
+        "h:body": {},
+        "p:growl": {},
+        "h:form": {}
+    },
+    "attributes": {}
+}

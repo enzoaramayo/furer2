@@ -1,0 +1,8 @@
+aplicacion\modelo\dominio\Usuario.class
+aplicacion\controlador\beans\LoginBean.class
+aplicacion\modelo\util\ListaUsuarios.class
+com\mycompany\peliculas\Welcome.class
+aplicacion\dao\imp\ListaUsuariosDAOImp.class
+aplicacion\controlador\beans\UploaderBean.class
+aplicacion\controlador\beans\CatalogoBean.class
+aplicacion\dao\IUsuarioDAO.class

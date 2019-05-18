@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Creacion de cuenta nueva</title>
+    </h:head>
+    <h:body>
+        <p:growl id="mensajes" showDetail="true" life="10000" />
+        <h:form>
+            <p:panel header="Nueva cuenta" style="width:360px;">
+                <h:panelGrid columns="2" cellpadding="5">
+                    <h:outputLabel for="nombre" value="Nombre" />
+                    <p:inputText value="#{loginBean.nuevo.nombre}" id="nombre"
+                                 required="true" label="nombre" />
+                    <h:outputLabel for="edad" value="Edad" />
+                    <p:inputText value="#{loginBean.nuevo.edad}" id="edad"
+                                 required="true" label="edad"/>
+                    <h:outputLabel for="usuario" value="Usuario" />
+                    <p:inputText value="#{loginBean.nuevo.usuario}" id="usuario"
+                                 required="true" label="usuario" />
+                    <h:outputLabel for="contraseña" value="Contraseña" />
+                    <p:password value="#{loginBean.nuevo.contraseña}" id="contraseña"
+                                required="true" label="contraseña" />
+                    <h:column/>
+                    <p:commandButton id="loginButton" value="Enviar"
+                                     action="#{loginBean.crearCuenta()}" oncomplete="PF('mensajes').show()" update=":mensajes"
+                                     />
+                    <h:column/>
+                    <p:link value="Salir" outcome="index"/>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+
+
